@@ -4,6 +4,7 @@
 import {  createBrowserRouter } from "react-router-dom";
 import NewTask from "../pages/tasks/NewTask";
 import ProjectDetails from "../pages/project_details";
+import Sports from "../pages/sports";
 import Signin from "../pages/signin"
 import Signup from "../pages/signup"
 import ProtectedRoutes from "./ProtectedRoute"
@@ -16,7 +17,7 @@ import Notfound from "../pages/Notfound";
 import ProjectContainer from "../pages/projects/ProjectContainer";
 import TaskDetailsContainer from "../pages/tasks/TaskDetailsContainer";
 const router = createBrowserRouter([
-    { path: "/", element: <Navigate to="/account/projects" replace /> },
+    { path: "/", element: <Navigate to="/account/sport" replace /> },
 
   {
     path: "/signin", 
@@ -45,7 +46,11 @@ const router = createBrowserRouter([
     ),
     ErrorBoundary: () => <>Failed to load the page</>,
     children: [
-        { index: true, element: <Navigate to="/account/projects" replace /> },
+        { index: true, element: <Navigate to="/account/sport" replace /> },
+        {
+          path: "sport",
+          element: <Sports/>
+        },
         {
           path: "projects",
           element: <ProjectContainer />,

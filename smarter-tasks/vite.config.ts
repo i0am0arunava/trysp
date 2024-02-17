@@ -12,8 +12,8 @@ export default defineConfig({
       },
       registerType: 'autoUpdate',
       manifest: {
-        name: "Sport News application",
-        short_name: "Sports News",
+        name: "Smarter Tasks application",
+        short_name: "Smarter Tasks",
         icons: [
         
           {
